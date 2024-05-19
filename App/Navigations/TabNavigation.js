@@ -6,6 +6,7 @@ import Home from "../Screens/Home";
 import Profile from "../Screens/Profile";
 import Search from "../Screens/Search";
 import { AntDesign } from "@expo/vector-icons";
+import HomeNavigation from "./HomeNavigation";
 // import { AntDesign } from "@expo/vector-icons";
 
 export default function TabNavigation() {
@@ -18,7 +19,7 @@ export default function TabNavigation() {
     >
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={HomeNavigation}
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
@@ -36,7 +37,7 @@ export default function TabNavigation() {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Fav"
         component={Fav}
         options={{
@@ -55,7 +56,7 @@ export default function TabNavigation() {
             <AntDesign name="profile" size={size} color={color} />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 }
